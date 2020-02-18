@@ -1,0 +1,17 @@
+{%extends "base.html"%}
+
+{%block css%}
+<link rel="stylesheet" href="{{ url_for('static', filename='task.css')}}">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+{%endblock%}
+
+{%block content%}
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.taskNumber.label }}<br>
+        {{ form.taskNumber(size=32) }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+{%endblock%}

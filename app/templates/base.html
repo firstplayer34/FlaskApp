@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    {%block css%}
+    {%endblock%}
     {%if title%}
         <title>{{title}}</title>
     {%else%}
@@ -18,9 +19,9 @@
             <div class="line"></div>
         </div>
         <ul class="nav-links">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Projects</a></li>
+            <li><a href="/index">Домой</a></li>
+            <li><a href="/task">Выбор задания</a></li>
+            <li><a href="#">Контакты</a></li>
         </ul>
     </nav>
 
